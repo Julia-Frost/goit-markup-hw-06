@@ -43,14 +43,11 @@ p {
 
 .header {
   border-bottom: 1px solid #ececec;
-  /* padding-top: 25px;
-  padding-bottom: 25px; */
 }
 
 .topline {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
 }
 
 .logo {
@@ -156,6 +153,7 @@ p {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+
   background-color: var(--background-color-dark);
   background-image: linear-gradient(
       to top,
@@ -443,7 +441,7 @@ p {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.address p:hover {
+.address p:hover .address p:focus {
   color: var(--hover-color);
 }
 
@@ -580,8 +578,7 @@ p {
 }
 
 .projects-link:hover,
-.projects-link:focus,
-.projects-link:active {
+.projects-link:focus {
   display: block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -610,10 +607,11 @@ p {
 
   transform: translateY(100%);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.projects-link:hover .label-description {
+.projects-link:hover .label-description,
+.projects-link:focus .label-description {
   opacity: 1;
   transform: translateY(0);
   background-color: rgba(33, 150, 243, 0.9);
