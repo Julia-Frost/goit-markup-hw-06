@@ -2,6 +2,7 @@
   --title-color: #212121;
   --text-color: #757575;
   --hover-color: #2196f3;
+  --button-hover-color: #188ce8;
   --background-color-dark: #2f303a;
   --white-color: #ffffff;
   --background-color-light: #f5f4fa;
@@ -58,10 +59,17 @@ p {
   line-height: 1.19;
   letter-spacing: 0.03em;
   margin-right: 93px;
+  transition: text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo > span {
   color: var(--hover-color);
+}
+
+.logo:hover,
+.logo:focus {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.15),
+    0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .menu-nav {
@@ -186,6 +194,13 @@ p {
   color: var(--white-color);
   cursor: pointer;
   padding: 10px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--button-hover-color);
 }
 
 /* Особенности */
@@ -196,7 +211,14 @@ p {
 
 /* Плохая практика!!! Не читабельно для ассистива */
 .visualy-hiden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .special-list {
@@ -264,6 +286,7 @@ p {
   position: relative;
   max-height: 294px;
 }
+
 .card-description {
   position: absolute;
   bottom: 0;
@@ -426,6 +449,13 @@ p {
   color: var(--white-color);
   margin-bottom: 20px;
   margin-right: 0;
+  transition: text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-logo:hover,
+.footer-logo:focus {
+  text-shadow: 0px 4px 4px rgba(117, 117, 117, 0.4), 0px 4px 4px rgba(117, 117, 117, 0.4),
+    0px 4px 4px rgba(117, 117, 117, 0.4);
 }
 
 .address {
@@ -441,7 +471,8 @@ p {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.address p:hover .address p:focus {
+.address p:hover,
+.address p:focus {
   color: var(--hover-color);
 }
 
@@ -458,7 +489,7 @@ p {
   color: var(--hover-color);
 }
 
-/* Соцсети */
+/* Соцсети в футере */
 .social {
   margin-left: 70px;
 }
@@ -507,7 +538,7 @@ p {
   height: 20px;
 }
 
-/* Подписаться на рассылку */
+/* Подписаться на рассылку в футере*/
 
 .subscribe {
   margin-left: auto;
@@ -536,6 +567,7 @@ p {
   border-radius: 4px;
   padding: 15px;
   margin-right: 12px;
+  outline: 0;
 }
 
 .footer-button {
@@ -552,6 +584,13 @@ p {
   justify-content: center;
   align-items: center;
   display: inline-flex;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-button:hover,
+.footer-button:focus {
+  background-color: var(--button-hover-color);
 }
 
 .send-icon {
@@ -787,7 +826,7 @@ p {
   color: var(--text-color);
 }
 
-.label-name {
+.modal-label {
   position: relative;
   font-size: 12px;
   line-height: 1.16;
@@ -804,23 +843,29 @@ p {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .input-area:hover,
-.input-area:focus {
+.input-area:focus,
+.input-area:hover {
+  outline: 0;
   border-color: var(--hover-color);
-} */
+}
 
 .modal-icon {
   position: absolute;
+
   left: 15px;
   top: 32px;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .modal-icon:hover,
-.modal-icon:focus {
+.input-area:focus + .modal-icon,
+.input-area:hover + .modal-icon {
   fill: var(--hover-color);
-} */
+}
+
 .feedback-area {
   margin-top: 4px;
   margin-bottom: 20px;
@@ -836,19 +881,56 @@ p {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox-area {
+.feedback-area:focus,
+.feedback-area:hover {
+  outline: 0;
+  border-color: var(--hover-color);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
-}
 
-.conditions-label {
-  margin-left: 8px;
   font-size: 14px;
   line-height: 1.71;
-
   letter-spacing: 0.03em;
+}
+
+.checkbox-label a {
+  margin-left: 4px;
+}
+
+.checkbox-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-icon {
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  border: 2px solid rgba(33, 33, 33, 1);
+  border-radius: 2px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-input:checked + .checkbox-icon {
+  background-origin: border-box;
+  background-color: var(--hover-color);
+  border-color: transparent;
 }
 
 .contract-conditions {
@@ -874,4 +956,11 @@ p {
   background-color: var(--hover-color);
   color: var(--white-color);
   cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  background-color: var(--button-hover-color);
 }

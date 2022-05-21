@@ -364,44 +364,43 @@
           </button>
           <h3 class="modal-title">Оставьте свои данные, мы вам перезвоним</h3>
           <form class="modal-form" action="">
-            <label class="label-name" for="name-label"
+            <label class="modal-label"
               >Имя
-              <input class="input-area" type="text" id="name-label" />
+              <input class="input-area" type="text" />
               <svg class="modal-icon" width="12" height="12">
                 <use href="./images/icons.svg#person-modal"></use>
               </svg>
             </label>
-            <label class="label-name" for="name-label"
+            <label class="modal-label"
               >Телефон
-              <input class="input-area" type="tel" id="name-label" />
+              <input class="input-area" type="tel" />
               <svg class="modal-icon" width="13" height="13">
                 <use href="./images/icons.svg#phone-modal"></use>
               </svg>
             </label>
-            <label class="label-name" for="name-label"
+            <label class="modal-label"
               >Почта
-              <input class="input-area" type="email" id="name-label" />
+              <input class="input-area" type="email" />
               <svg class="modal-icon" width="15" height="12">
                 <use href="./images/icons.svg#mail-modal"></use>
               </svg>
             </label>
-            <label class="label-name" for="name-label"
+            <label class="modal-label"
               >Комментарий
               <textarea
                 class="feedback-area"
-                id="name-label"
                 name="feedback"
-                rows="5"
-                placeholder="Type your message here..."
+                placeholder="Введите текст"
               ></textarea>
             </label>
-            <div class="checkbox-area">
-              <input type="checkbox" id="checkbox" />
-              <label for="checkbox" class="conditions-label">
-                Соглашаюсь с рассылкой и принимаю
-                <a class="contract-conditions">Условия договора</a>
-              </label>
-            </div>
+
+            <label class="checkbox-label" for="checkbox">
+              <input class="checkbox-input" type="checkbox" id="checkbox" />
+              <svg class="checkbox-icon"><use href="./images/icons.svg#icon-check"></use></svg>
+              Соглашаюсь с рассылкой и принимаю
+              <a class="contract-conditions">Условия договора</a>
+            </label>
+
             <button class="submit-button" type="submit">Отправить</button>
           </form>
         </div>
