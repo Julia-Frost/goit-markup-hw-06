@@ -51,7 +51,7 @@
       <section class="hero">
         <div class="hero-content container">
           <h1 class="hero-title">Эффективные решения<br />для вашего бизнеса</h1>
-          <button type="button" data-modal-open>Заказать услугу</button>
+          <button class="hero-button" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
       <!-- Особенности -->
@@ -357,11 +357,12 @@
       <!-- Модальное окно -->
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <button class="modal-close-btn" type="button" data-modal-close>
+          <button class="modal-close-btn" type="submit" data-modal-close>
             <svg class="close-btn-icon">
               <use href="./images/icons.svg#close-btn"></use>
             </svg>
           </button>
+          <h3></h3>
         </div>
       </div>
     </main>
@@ -416,6 +417,19 @@
               </a>
             </li>
           </ul>
+        </div>
+
+        <div class="subscribe">
+          <h3 class="subscribe-title">Подпишитесь на рассылку</h3>
+          <label for="subscribe-mail">
+            <input type="email" placeholder="E-mail" id="subscribe-mail" name="E-mail" />
+          </label>
+          <button class="footer-button" type="submit">
+            Подписаться
+            <svg class="send-icon">
+              <use href="./images/icons.svg#icon-send"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </footer>
