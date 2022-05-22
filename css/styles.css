@@ -162,7 +162,8 @@ p {
   padding-top: 200px;
   padding-bottom: 200px;
 
-  background-color: var(--background-color-dark);
+  /* background-color: var(--background-color-dark); */
+
   background-image: linear-gradient(
       to top,
       var(--hero-background-color),
@@ -764,6 +765,7 @@ p {
 
   width: 528px;
   height: 581px;
+  padding: 40px;
 
   background-color: var(--white-color);
   border-radius: 4px;
@@ -813,15 +815,11 @@ p {
   letter-spacing: 0.03em;
 
   color: var(--title-color);
-
-  margin-top: 40px;
 }
 
 .modal-form {
   display: flex;
   flex-direction: column;
-  margin-left: 40px;
-  margin-right: 40px;
   margin-top: 12px;
   color: var(--text-color);
 }
@@ -925,6 +923,10 @@ p {
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-input:focus + .checkbox-icon {
+  border-color: var(--hover-color);
 }
 
 .checkbox-input:checked + .checkbox-icon {
